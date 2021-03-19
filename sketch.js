@@ -43,7 +43,6 @@ createCanvas(displayWidth-20,displayHeight-400);
 // Moving background
 path=createSprite(0,150);
 path.addImage(pathImg);
-path.velocityX =-2
 path.x = path.width/2
 
 
@@ -79,13 +78,11 @@ function draw() {
     distance = distance + Math.round(getFrameRate()/60);
     
     mainCyclist.y = World.mouseY;
-    //mainCyclist.x = 0;
-    //edges= createEdgeSprites();
-    //mainCyclist .collide(edges);
-    //mainCyclist.velocityX=5;
+   
     camera.position.x = mainCyclist.x+500;
-    console.log("x value " + mainCyclist.x);
+   
   
+    path.velocityX =-2
     
     //code to reset the background
     if(path.x < 0 ){
